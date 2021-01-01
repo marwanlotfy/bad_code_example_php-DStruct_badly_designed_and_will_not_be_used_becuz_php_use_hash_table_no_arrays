@@ -1,0 +1,15 @@
+{
+    "name": "marwanlotfy/data-struct",
+    "authors": [
+        {
+            "name": "marwanLotfy",
+            "email": "marwan.lotfy@fixawy.net"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "DataStruct\\":"src/"
+        }
+    }
+}
