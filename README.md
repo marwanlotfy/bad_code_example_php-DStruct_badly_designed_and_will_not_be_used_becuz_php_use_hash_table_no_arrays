@@ -55,3 +55,7 @@ half of code is aleardy written man
 how cool is that 
 
 and i will not write the code beacuse i am lazy 
+
+#update 
+
+i have refactored this code 
