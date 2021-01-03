@@ -1,15 +1,32 @@
 <?php
 
-use DataStruct\Stacks\ListStack;
-use DataStruct\Stacks\ArrayStack;
+use DataStruct\Queues\Queue;
+use DataStruct\Stacks\Stack;
+use DataStruct\StoringStrategies\ArrayLists\ArrayList;
+use DataStruct\StoringStrategies\LinkedLists\LinkedList;
 
 require __DIR__ . '/vendor/autoload.php';
 
-echo " Linked List Stack ";
+$stack = new Stack(new ArrayList);
 
-$lstack = new ListStack();
-$lstack->push(1);
-$lstack->push(2);
-$lstack->push(4);
+$stack->push(1);
+$stack->push(2);
+$stack->push(3);
+$stack->push(4);
 
-var_dump($lstack);
+echo $stack->pop();
+echo $stack->pop();
+echo $stack->pop();
+echo $stack->pop();
+
+$queue = new Queue(new LinkedList);
+
+$queue->addElement(1);
+$queue->addElement(2);
+$queue->addElement(3);
+$queue->addElement(4);
+
+echo $queue->getElement();
+echo $queue->getElement();
+echo $queue->getElement();
+echo $queue->getElement();

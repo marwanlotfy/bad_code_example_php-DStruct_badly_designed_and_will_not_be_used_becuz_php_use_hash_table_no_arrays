@@ -2,8 +2,24 @@
 
 namespace DataStruct\Stacks;
 
-abstract class Stack 
+use DataStruct\StoringStrategies\LIFOAble;
+
+class Stack 
 {
-    abstract public function push($data);
-    abstract public function pop();
+    private $storingStrategy;
+
+    public function __construct( LIFOAble $storingStrategy )
+    {
+        $this->storingStrategy = $storingStrategy;
+    }
+
+    public function push($data)
+    {
+        $this->storingStrategy->append($data);
+    }
+
+    public function pop()
+    {
+        return $this->storingStrategy->getLastElement();
+    }
 }
